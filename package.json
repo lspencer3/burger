@@ -1,7 +1,7 @@
 {
-  "name": "burger",
+  "name": "Burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "helps you eat burgers",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
