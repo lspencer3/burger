@@ -32,9 +32,25 @@ $(function() {
 	      data: update
 	    }).then(
 	      function() {
-	        console.log("Burger Devoured!!!");
+	        console.log("Burger Devoured!!!")
 	        // Reload the page to get the updated list
-	        location.reload(true);
+	        location.reload();
+	    });
+	})
+	$(".btn-danger").on("click", function(event){
+		var id = $(this).data("id");
+		console.log(id)
+		var deletion ={
+			delete: 1
+		}
+		$.ajax("/burgers/" + id, {
+	      type: "DELETE",
+	      data: deletion
+	    }).then(
+	      function() {
+	        console.log("Burger Deleted!!!")
+	        // Reload the page to get the updated list
+	        location.reload();
 	    });
 	})
 });

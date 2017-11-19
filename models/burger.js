@@ -11,16 +11,16 @@ var burgers = {
       cb(res);
     });
   },
-  updateOne: function(col1, val1, col2, val2) {
+  updateOne: function(col1, val1, col2, val2, cb) {
     orm.updateOne("burgers", col1, val1, col2, val2, function(res) {
       cb(res);
     });
-  }/*,
-  delete: function(condition, cb) {
-    orm.delete("cats", condition, function(res) {
+  },
+  deleteOne: function(col, val, cb) {
+    orm.deleteOne("burgers", col, val, function(res) {
       cb(res);
     });
-  }*/
+  }
 };
 
 

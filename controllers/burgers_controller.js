@@ -20,20 +20,27 @@ app.post("/burgers/add", function(req, res) {
   });
 });
 
-app.put("/burgers/:id", function(req, res){
-	console.log(req.params.id)
+app.put("/burgers/:id", function(req, res) {
+	//console.log(req.params.id)
 	var id = req.params.id
 	var update = req.body.devoured
-	console.log(id,update)
-	burgers.updateOne("devoured", update, "id", id, function(result){
-			if (result.changedRows == 0) {
-	      		// If no rows were changed, then the ID must not exist, so 404
-	      		return res.status(404).end();
-	    	} 
-	    	else {
-	      		res.json({id: data.id});
-	    	}
+	//console.log(id,update)
+	burgers.updateOne("devoured", update, "id", id, function(data){
+			console.log(data)
+	    	res.end()
+	      	//res.json({message:data.message});
+		})
+	})
 
+app.delete("/burgers/:id", function(req, res) {
+	//console.log(req.params.id)
+	var id = req.params.id
+	var update = req.body.delete
+	//console.log(id,update)
+	burgers.deleteOne("id", id, function(data){
+			console.log(data)
+	    	res.end()
+	      	//res.json({message:data.message});
 		})
 	})
 
