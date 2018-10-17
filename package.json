@@ -1,5 +1,5 @@
 {
-  "name": "Friend-Finder",
+  "name": "Grocery List",
   "version": "1.0.0",
   "description": "helps you find the friends you're looking for...",
   "main": "server.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lspencer3/Friend-Finder.git"
+    "url": "git@github.com:lspencer3/burger.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lspencer3/Friend-Finder/issues"
+    "url": "git@github.com:lspencer3/burger.git"
   },
-  "homepage": "https://github.com/lspencer3/Friend-Finder#readme",
+  "homepage": "git@github.com:lspencer3/burger.git",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.16.2",
