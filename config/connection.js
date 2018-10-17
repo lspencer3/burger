@@ -8,7 +8,7 @@ var connection;
 
 // Set up our connection information
 if (process.env.JAWSDB_URL){
-  connection = mysql.createConnection(process.envJAWSDB_URL)
+  connection = mysql.createConnection(process.env.JAWSDB_URL)
 }
   connection = mysql.createConnection({
   port: 3306,
