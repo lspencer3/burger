@@ -37,6 +37,7 @@ $(function() {
 	        location.reload();
 	    });
 	})
+	
 	$(".btn-danger").on("click", function(event){
 		var id = $(this).data("id");
 		console.log(id)

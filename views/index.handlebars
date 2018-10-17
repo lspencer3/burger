@@ -1,6 +1,6 @@
 <div class="container-fluid">
 <div class="col-md-12">
-<h2 id="title">Eat Da Burgers</h2>
+<h2 id="title">Grocery List</h2>
 </div>
 
 <div class="col-md-6">
@@ -8,19 +8,21 @@
 {{#each burgers}}
 {{#unless this.devoured}}
 <li>
-<p data-id="{{this.id}}">{{burger_name}}&nbsp&nbsp&nbsp<button data-id="{{this.id}}" class="btn btn-primary">Devour</button></p>
+<p data-id="{{this.id}}">{{burger_name}}&nbsp&nbsp&nbsp<button data-id="{{this.id}}" class="btn btn-primary">Mark Purchased</button></p>
 </li>
 {{/unless}}
 {{/each}}
 </ul>
 </div>
 
+
+<h3 id="title">Purchased</h3>
 <div class="col-md-6">
 <ul id ="eaten" ">
 {{#each burgers}}
 {{#if this.devoured}}
 <li>
-<p>{{burger_name}}&nbsp&nbsp&nbsp<button data-id="{{this.id}}" class="btn btn-danger">Delete</button></p>
+<p>{{burger_name}}&nbsp&nbsp&nbsp<button data-id="{{this.id}}" class="btn btn-danger">Remove Item</button></p>
 </li>
 {{/if}}
 {{/each}}
@@ -28,13 +30,13 @@
 </div>
 
 <div class="col-md-12">
-<h2>Add Da Burger</h2>
+<h2>Add An Item</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="burg">Burger Name:</label>
+    <label for="burg">Enter Item Name:</label>
     <input type="text" id="newBurger" name="newBurger">
-  <button class="btn btn-success" id="submit" type="submit">Add Burger</button>
+  <button class="btn btn-success" id="submit" type="submit">Add Item</button>
   </div>
   </div>
 
